@@ -46,8 +46,8 @@ nav{
 }
 
 
-.nav_links > div li:not(:first-child){
-    display: none;
+.nav_links > div li{
+    display: block;
 }
 
 .nav_links a{
@@ -195,9 +195,6 @@ nav{
 }
 
 @media (width > 768px) {
-    .nav_links > div li:not(:first-child){
-        display: block;
-    }
     .nav_links > div {
         display: flex;
         align-items: center;
@@ -210,4 +207,44 @@ nav{
         line-height: 5rem;
     }
   
+}
+
+/* Hamburger menu style */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 1000;
+  }
+
+  .nav_links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: rgba(0,0,0,0.8);
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .nav_links.show {
+    right: 0;
+  }
+
+  .nav_links > div {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .nav_links.show > div li{
+      display: block;
+  }
 }
