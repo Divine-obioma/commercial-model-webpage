@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <!-- In your HTML <head> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link
@@ -15,14 +14,19 @@
 <body>
   <div class="container">
     <nav>
+      <!-- Hamburger Icon -->
+      <div class="hamburger">
+        <i class="ri-menu-line"></i>
+      </div>
+
       <ul class="nav_links">
         <div>
           <li><a href="#">ABOUT</a></li>
           <li><a href="#">WEDDING</a></li>
           <li><a href="#">FAMILY</a></li>
           <li><a href="#">BUSINESS</a></li>
+          <li><a href="#">CONTACT</a></li>
         </div>
-        <li><a href="#">CONTACT</a></li>
       </ul>
     </nav>
 
@@ -53,5 +57,16 @@
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="script.js"></script>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav_links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+      hamburger.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
