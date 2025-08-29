@@ -206,6 +206,10 @@ nav{
         font-size: 5rem;
         line-height: 5rem;
     }
+
+    .nav_links a {
+    color: var(--white); /* or a contrasting color */
+  }
   
 }
 
@@ -248,3 +252,4 @@ nav{
       display: block;
   }
 }
+
